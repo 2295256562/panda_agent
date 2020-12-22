@@ -29,7 +29,6 @@ public class AndroidUtils {
      */
     public static String getResolution(IDevice iDevice) throws IDeviceExecuteShellCommandException {
         String wmSize = executeShellCommand(iDevice, "wm size");
-
         Pattern pattern = Pattern.compile("Physical size: (\\d+x\\d+)");
         Matcher matcher = pattern.matcher(wmSize);
         while (matcher.find()) {
@@ -37,7 +36,6 @@ public class AndroidUtils {
         }
         throw new RuntimeException(String.format("[%s]cannot find physical size, wm size: %s", iDevice.getSerialNumber(), wmSize));
     }
-
     /**
      * 获取内存大小
      * @param iDevice
@@ -97,9 +95,13 @@ public class AndroidUtils {
         } catch (TimeoutException | AdbCommandRejectedException | ShellCommandUnresponsiveException | IOException e) {
             throw new IDeviceExecuteShellCommandException(e);
         }
-
         String response = collectingOutputReceiver.getOutput();
         log.info("[{}]response: {}", mobileId, response);
         return response;
+ //       return collectingOutputReceiver.getOutput();
+//        log.info("[{}]response: {}", mobileId, collectingOutputReceiver.getOutput());
+//        return response;
     }
+
+
 }

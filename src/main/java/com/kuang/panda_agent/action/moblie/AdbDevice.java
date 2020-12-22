@@ -310,7 +310,7 @@ public class AdbDevice {
                 ex.printStackTrace();
             }
             executeShellCommand(device,command);
-            log.error("ADB未授权");
+            //log.error("ADB未授权");
             e.printStackTrace();
         } catch (ShellCommandUnresponsiveException e) {
             e.printStackTrace();
