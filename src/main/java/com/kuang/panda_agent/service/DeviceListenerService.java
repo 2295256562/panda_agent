@@ -138,19 +138,6 @@ public class DeviceListenerService {
         }
     }
 
-    //public String getADBPath() {
-    //    if (adbPath == null) {
-    //        adbPath = System.getenv("ANDROID_SDK_ROOT");
-    //        if (adbPath != null) {
-    //            adbPath += File.separator + adbPlatformTools;
-    //        } else {
-    //            adbPath = "adb";
-    //            return adbPath;
-    //        }
-    //    }
-    //    //adbPath += File.separator + "adb";
-    //    return adbPath;
-    //}
 
     /**
      * 监听USB
