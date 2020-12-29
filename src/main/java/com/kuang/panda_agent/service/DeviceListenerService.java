@@ -8,7 +8,6 @@ import com.kuang.panda_agent.action.moblie.IAdbServerListener;
 import com.kuang.panda_agent.common.Constant;
 import com.kuang.panda_agent.utils.AndroidMonitor;
 import com.kuang.panda_agent.utils.AndroidUtils;
-import com.oracle.tools.packager.Log;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -140,19 +139,6 @@ public class DeviceListenerService {
         }
     }
 
-    //public String getADBPath() {
-    //    if (adbPath == null) {
-    //        adbPath = System.getenv("ANDROID_SDK_ROOT");
-    //        if (adbPath != null) {
-    //            adbPath += File.separator + adbPlatformTools;
-    //        } else {
-    //            adbPath = "adb";
-    //            return adbPath;
-    //        }
-    //    }
-    //    //adbPath += File.separator + "adb";
-    //    return adbPath;
-    //}
 
     /**
      * 监听USB
