@@ -25,4 +25,5 @@ public class Constant {
     public static final String PICTURESCRIPTMINICAPRESOLUTION = "PICTURESCRIPTMINICAPRESOLUTION";
     public static final String PICTURESCRIPTCOMMONSTR = "PICTURESCRIPTCOMMONSTR";
     public static final String PICTURESCRIPTPATH = "PICTURESCRIPTPATH";
+
 }
