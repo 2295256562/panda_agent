@@ -3,13 +3,15 @@ version: @project.version@
 spring:
   application:
     name: admin-client
+
   boot:
     admin:
       client:
-        url: http://localhost:9010
+        url: ${server-address}/springboot-admin
 server:
-  port: 8769
+  port: 9088
 
+address: http://localhost:9010
 management:
   endpoints:
     web:

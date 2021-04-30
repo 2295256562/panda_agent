@@ -1,4 +1,4 @@
-package com.kuang.panda_agent.core;
+package com.kuang.panda_agent.core.mobile;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

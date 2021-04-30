@@ -1,23 +1,16 @@
 package com.kuang.panda_agent.service;
 
 import com.android.ddmlib.AndroidDebugBridge;
-import com.android.ddmlib.DdmPreferences;
 import com.android.ddmlib.IDevice;
 import com.kuang.panda_agent.action.moblie.AdbDevice;
 import com.kuang.panda_agent.action.moblie.IAdbServerListener;
 import com.kuang.panda_agent.common.Constant;
-import com.kuang.panda_agent.utils.AndroidMonitor;
 import com.kuang.panda_agent.utils.AndroidUtils;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,7 +22,7 @@ import javax.usb.*;
 import javax.usb.event.UsbServicesEvent;
 import javax.usb.event.UsbServicesListener;
 
-import static com.kuang.panda_agent.action.moblie.ADB.getPath;
+import static com.kuang.panda_agent.core.mobile.android.ADB.getPath;
 
 /**
  * 设备监听器服务

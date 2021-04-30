@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static com.kuang.panda_agent.action.moblie.ADB.*;
+import static com.kuang.panda_agent.core.mobile.android.ADB.*;
 
 class ADBTest {
     @Test

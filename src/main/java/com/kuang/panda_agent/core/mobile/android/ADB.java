@@ -1,5 +1,6 @@
-package com.kuang.panda_agent.action.moblie;
+package com.kuang.panda_agent.core.mobile.android;
 
+import com.android.ddmlib.AndroidDebugBridge;
 import com.kuang.panda_agent.utils.Terminal;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
@@ -12,6 +13,12 @@ import java.nio.file.Paths;
 
 @Slf4j
 public class ADB {
+
+    public static void addDeviceChangeListener(AndroidDebugBridge.IDeviceChangeListener deviceChangeListener){
+        AndroidDebugBridge.init(false);
+        AndroidDebugBridge.createBridge(getPath(), false);
+        AndroidDebugBridge.addDeviceChangeListener(deviceChangeListener);
+    }
 
     /**
      * 杀死adb服务器
